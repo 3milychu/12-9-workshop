@@ -2,6 +2,9 @@
 
 Workshop files for introducing essential components to node visualizations generated with d3 v5. Covered in this workshop: 
 
+## demo of what we made
+https://3milychu.github.io/12-9-workshop/
+
 ## d3.json() / d3.csv() / d3.tsv()
 d3 promise function to load data and run functions in callback
 
@@ -16,6 +19,4 @@ d3 function that returns a root node (object) that has children under parents at
 
 ## d3.pack()
 d3 function that makes it easy to "pack" nodes in a bubble layout based on number of elements and size of your container
-
-
 
