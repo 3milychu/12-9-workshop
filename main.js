@@ -40,25 +40,30 @@ d3.csv('https://raw.githubusercontent.com/3milychu/12-9-workshop/master/data.csv
 		// run upon loading the page - load bubblechart in specified containers the dataset passed through
 		bubblechart('#ate_yes', q1_ate_yes)
 		bubblechart('#ate_no', q1_ate_no)
+		selectOption('#option1')
 
 		// update the data simply based on filter selected
 		option1.onclick=function(data) {
 			clear()
+			selectOption('#option1')
 			bubblechart('#ate_yes', q1_ate_yes)
 			bubblechart('#ate_no', q1_ate_no)
 		}
 		option2.onclick=function() {
 			clear()
+			selectOption('#option2')
 			bubblechart('#ate_yes', q2_ate_yes)
 			bubblechart('#ate_no', q2_ate_no)
 		}
 		option3.onclick=function() {
 			clear()
+			selectOption('#option3')
 			bubblechart('#ate_yes', q3_ate_yes)
 			bubblechart('#ate_no', q3_ate_no)
 		}
 		option4.onclick=function() {
 			clear()
+			selectOption('#option4')
 			bubblechart('#ate_yes', q4_ate_yes)
 			bubblechart('#ate_no', q4_ate_no)
 		}
@@ -69,10 +74,21 @@ d3.csv('https://raw.githubusercontent.com/3milychu/12-9-workshop/master/data.csv
 	.catch(function(error){
 	})
 
+function selectOption(item){
+	item = document.querySelector(item)
+	item.style.color='white'
+	item.style.backgroundColor='#1d1d1d'
+}
+
 // clears all svgs 
 function clear() {
 	svg = d3.selectAll('svg')
 	svg.remove()
+	filters = document.querySelectorAll('.option')
+	filters.forEach(function(item){
+		item.style.backgroundColor='white'
+		item.style.color='#1d1d1d'
+	})
 }
 
 // gets position of mouse on the page
