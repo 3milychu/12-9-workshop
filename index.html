@@ -15,18 +15,25 @@
 		font-size:1em;
 	}
 	.energy1 {
+		/*for legend*/
+		background-color:#bee4ff; 
+		/*for nodes*/
 		fill:#bee4ff;
 	}
 	.energy2 {
+		background-color:#7ecaff;
 		fill:#7ecaff;
 	}
 	.energy3 {
+		background-color:#18a0ff;
 		fill:#18a0ff;
 	}
 	.energy4 {
+		background-color:#067ccf;
 		fill:#067ccf;
 	}
 	.energy5 {
+		background-color:#045187;
 		fill:#045187;
 	}
 	.filters {
@@ -68,10 +75,40 @@
 	circle {
 		cursor:pointer;
 	}
+	.legend {
+		position:absolute;
+		bottom:2%;
+		width:100%;
+		letter-spacing:-5em;
+	}
+	.legend h2 {
+		letter-spacing:0em;
+		display:inline-block;
+		font-size:1em;
+		font-weight:800;
+		vertical-align:text-bottom;
+		margin:0% 2%;
+	}
+	.legend div {
+		width:2em;
+		height:2em;
+		margin:0;
+		padding:0;
+		display:inline-block;
+	}
 </style>
 <body>
 	<div class="tooltip"></div>
 	<div id='canvas'>
+		<div class='legend'>
+				<h2>Low energy</h2>
+				<div class='energy1'></div>
+				<div class='energy2'></div>
+				<div class='energy3'></div>
+				<div class='energy4'></div>
+				<div class='energy5'></div>
+				<h2>High energy</h2>
+		</div>
 		<div class='filters'>
 			<div class='option' id='option1'>Q1: 12:10-12:55pm</div>
 			<div class='option' id='option2'>Q2: 12:56-1:41pm</div>
