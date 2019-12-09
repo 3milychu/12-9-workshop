@@ -174,13 +174,13 @@ let svg = d3.select(location)
         });
 
     //format the text for each bubble
-    bubbles.append("text")
-        .attr("x", function(d){ return d.x; })
-        .attr("y", function(d){ return d.y + 5; })
-        .attr("text-anchor", "middle")
-        .text(function(d){ return d.data["Energy level (0 = low, 5 = high)"]; })
-        .style("fill","white")
-        .style("font-family", "Helvetica Neue, Helvetica, Arial, san-serif")
-        .style("font-size", "12px");
+    // bubbles.append("text")
+    //     .attr("x", function(d){ return d.x; })
+    //     .attr("y", function(d){ return d.y + 5; })
+    //     .attr("text-anchor", "middle")
+    //     .text(function(d){ return d.data["Energy level (0 = low, 5 = high)"]; })
+    //     .style("fill","white")
+    //     .style("font-family", "Helvetica Neue, Helvetica, Arial, san-serif")
+    //     .style("font-size", "12px");
 
 }
